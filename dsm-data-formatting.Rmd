@@ -30,6 +30,28 @@ The `dsm` package expects data to be in a certain format. In this example I'll s
 
 I recommend getting to grips with fitting models in `dsm` before reading this tutorial so you know what the end point will look like before trying to grapple with the data. An example for [Gulf of Mexico pantropical spotted dolphins is available here](https://examples.distancesampling.org/dsm-line-dolphins/mexico-analysis.html).
 
+# Prerequisites
+
+To run the code below you will need to have the `ggplot2` and `sf` libraries installed. You can do this with the following code:
+
+```{r eval=FALSE}
+install.packages(c("ggplot2", "sf"))
+```
+
+The Rhode Island data required downloaded below:
+
+- [loon observations](data/loons.csv)
+- [coastline dbf](data/ri_coast.dbf)
+- [coastline projection](data/ri_coast.prj)
+- [coastline shapefile](data/ri_coast.shp)
+- [coastline shx](data/ri_coast.shx)
+- [transects dbf](data/ri_transects.dbf)
+- [transects projection](data/ri_transects.prj)
+- [transects shapefile](data/ri_transects.shp)
+- [transects shx](data/ri_transects.shx)
+
+These should be placed in a folder called `data` for the code below to work.
+
 # Overview
 
 When we collect distance sampling data, we need to record the distance to an observation (along with other detectability covariates like weather), the transect we are currently on and how much effort we expended on that transect (its length or number of visits).
